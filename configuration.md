@@ -92,8 +92,8 @@
   "args": {
     "name": "cn",
     "uri": "https://example.com/cn.yaml", // 读取网络文件内容
-    "onlyIPType": "ipv6"                  // 只从 cn 类别中移除 IPv6 地址
+    // 注意：从远程 URI 拉取时建议在 CI 中设置超时，避免因网络问题导致构建卡死
+    "onlyIPType": "ipv4"                  // 只移除 IPv4 地址
   }
 }
-
 ```
