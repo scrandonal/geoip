@@ -114,22 +114,23 @@
       }
     },
     {
+      "type": "json",
+      "action": "add",
+      "args": {
+        "name": "netflix",
+        "uri": "https://ip-ranges.amazonaws.com/ip-ranges.json",
+        "jsonPath": [
+          "prefixes.#(service==\"NETFLIX\")#.ip_prefix",
+          "ipv6_prefixes.#(service==\"NETFLIX\")#.ipv6_prefix"
+        ]
+      }
+    },
+    {
       "type": "maxmindGeoLite2ASNCSV",
       "action": "add",
       "args": {
         "ipv4": "./geolite2/GeoLite2-ASN-Blocks-IPv4.csv",
-        "ipv6": "./geolite2/GeoLite2-ASN-Blocks-IPv6.csv",
-        "wantedList": {
-          "cloudflare": [
-            "AS395747",
-            "AS394536",
-            "AS209242",
-            "AS203898",
-            "AS202623",
-            "AS14789",
-            "AS1392"
-          ]
-        }
+        "ipv6": "./geolite2/GeoLite2-ASN-Blocks-IPv6.csv"
       }
     }
   ]
