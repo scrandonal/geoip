@@ -126,11 +126,11 @@
       }
     },
     {
-      "type": "maxmindGeoLite2ASNCSV",
+      "type": "text",
       "action": "add",
       "args": {
-        "ipv4": "./geolite2/GeoLite2-ASN-Blocks-IPv4.csv",
-        "ipv6": "./geolite2/GeoLite2-ASN-Blocks-IPv6.csv"
+        "name": "twitter",
+        "uri": "https://raw.githubusercontent.com/nicehash/nicehash-ip-ranges/master/twitter-ip-ranges.txt"
       }
     }
   ]
