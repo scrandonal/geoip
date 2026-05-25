@@ -126,11 +126,34 @@
       }
     },
     {
-      "type": "text",
+      "type": "json",
       "action": "add",
       "args": {
-        "name": "twitter",
-        "uri": "https://raw.githubusercontent.com/nicehash/nicehash-ip-ranges/master/twitter-ip-ranges.txt"
+        "name": "aws",
+        "uri": "https://ip-ranges.amazonaws.com/ip-ranges.json",
+        "jsonPath": [
+          "prefixes.#.ip_prefix",
+          "ipv6_prefixes.#.ipv6_prefix"
+        ]
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputDir": "./output/dat",
+        "outputName": "geoip.dat",
+        "wantedList": ["cn", "us", "jp", "gb", "tor", "cloudflare", "telegram", "google", "fastly", "cloudfront", "discord", "netflix", "aws"]
+      }
+    },
+    {
+      "type": "text",
+      "action": "output",
+      "args": {
+        "outputDir": "./output/text",
+        "wantedList": ["cn", "tor", "cloudflare", "telegram", "google", "fastly", "cloudfront", "discord", "netflix", "aws"]
       }
     }
   ]
