@@ -137,24 +137,5 @@
         ]
       }
     }
-  ],
-  "output": [
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "outputDir": "./output/dat",
-        "outputName": "geoip.dat",
-        "wantedList": ["cn", "us", "jp", "gb", "tor", "cloudflare", "telegram", "google", "fastly", "cloudfront", "discord", "netflix", "aws"]
-      }
-    },
-    {
-      "type": "text",
-      "action": "output",
-      "args": {
-        "outputDir": "./output/text",
-        "wantedList": ["cn", "tor", "cloudflare", "telegram", "google", "fastly", "cloudfront", "discord", "netflix", "aws"]
-      }
-    }
   ]
 }
